@@ -5,6 +5,7 @@
 # WARNING THIS SCRIPT IS IN PROGRESS AND CERTAINLY DOESN'T WORK
 
 # I highly recommand the user interface AvsPmod 2.4.1 (or later) to read the script.
+# How AvsPmod looks like: http://i.imgur.com/h8r5fjO.png
 
 /* To encode the .avs script into a classic video format (.mov + .wav) I use the free open source FFmpeg.
 Command lines I use (make sure you're in the same folder as ffmpeg.exe):
