@@ -1,9 +1,21 @@
+########## AviSynth 2.5 script for my guitar video Loop1.4
+########## ===============================================
+########## soundcloud.com/ocemusic // oceweb@gmail.com // Licence CC-BY 3.0
+
 # WARNING THIS SCRIPT IS IN PROGRESS AND CERTAINLY DOESN'T WORK
 
 # I highly recommand the user interface AvsPmod 2.4.1 (or later) to read the script.
 
-########## AviSynth 2.5 script for my guitar video Loop1.4 
-########## soundcloud.com/ocemusic // oceweb@gmail.com // Licence CC-BY 3.0
+/* To encode the .avs script into a classic video format (.mov + .wav) I use the free open source FFmpeg.
+Command lines I use (make sure you're in the same folder as ffmpeg.exe):
+1) For ~fast MQ encoding when I need to check a change quickly : 
+ffmpeg -i F:\Videos\Loops\Loops4_1\MosaiqueLoop4_1.avs -c:v libx264 -preset fast -crf 30 -c:a copy F:\Videos\Loops\Loops4_1\crf64sdX.mov
+2) For very slow but HQ video and efficient compression (for Youtube):
+ffmpeg -i F:\Videos\Loops\Loops4_1\MosaiqueLoop4_1.avs -c:v libx264 -preset veryslow -crf 16 -c:a copy F:\Videos\Loops\Loops4_1\crf64hd.mov
+*/
+
+# Beginnin of the script itself:
+#__________________________________________________________
 
 ## I - INTRO
 
@@ -14,10 +26,12 @@ t=337
 
 #### A - Sources
 
-# Note: the sources are called with 2 ways: FFVideoSource is requested for AviSynth 64 bits and FFmpeg 64 bits.
-# BUT AvsPmod is 32 bits only : ( , so you have to switch to the QTInput blocks to use the preview in AvsPmod.
-# Conclusion: to use AvsPmod preview, comment (/* */) "FFVideoSource block" and enable "QTInput blocks".
-# if you then encode with 64 bits FFmpeg (so AviSynth MUST be 64), enable the first one and comment the second one.
+/*NOTE: sources are called with 2 ways: FFVideoSource is requested for AviSynth 64 bits (so FFmpeg MUST be 64 bits).
+BUT AvsPmod is 32 bits only : ( , so you have to switch to the QTInput blocks to use the preview in AvsPmod.
+CONCLUSION: to use AvsPmod preview, comment (/* */) "FFVideoSource block" and enable "QTInput blocks".
+if you then encode with 64 bits FFmpeg (so AviSynth MUST be 64), enable the first one and comment the second one.
+The smartest way might be to chose FFmpeg 32 bits (so AviSynth MUST be 32) so you can use QTInput in both case.
+But, I'm not. */
 
 #/*# Load the plugin FFMS2, needed for .MOV in ffmpeg/avisynth 64bits, but AvsPmod won't recognize it
 loadplugin("C:\Program Files (x86)\AviSynth 2.5\plugins64\ffms2-x64.dll")
