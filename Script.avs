@@ -60,6 +60,7 @@ oceascii = ImageSource("F:\Videos\Loops\Loops4_1\images\oceascii.png").ConvertTo
 blank = BlankClip(width=w,height=h,fps=23.976023,length=10*t, color=$000000).Killaudio.BicubicResize(w, h, b=0.33, c=0.33).ConvertToYUY2().AssumeFPS(intro1)# Create a blank black clip for editing tricks and future mosaique construction
 
 #### B - Mix and overlay
+
 intro1a = intro1.Trim(0,170)
 introa = Overlay(intro1a, intro2, mode="subtract", opacity=0.5) 
 introb = Overlay(introa, intro3, mode="multiply", opacity=0.5)
@@ -84,6 +85,7 @@ intro = introf.Fadeout2(40)
 ## II - BODDY
 
 #### A - Sources
+
 #/*# Load the plugin FFMS2, needed for .MOV in ffmpeg/avisynth 64bits, but AvsPmod won't recognize it
 loadplugin("C:\Program Files (x86)\AviSynth 2.5\plugins64\ffms2-x64.dll")
 clip1 = FFVideoSource("F:\Videos\Loops\Loops4_1\Brut\DSC_0007.MOV", threads=1).Killaudio.Trim(135,t+135-1) #OK
@@ -109,6 +111,7 @@ clip6 = QTInput("F:\Videos\Loops\Loops4_1\Brut\DSC_0026.MOV").Killaudio.Trim(225
 
 #/*
 #### B - Face overlay http://avisynth.org/mediawiki/Overlay
+
 oce = ImageSource("F:\Videos\Loops\Loops4_1\images\OceForLoops.png")
 bg=ImageReader("F:\Videos\Loops\Loops4_1\images\OceForLoops.png",pixel_type="RGB32").ShowAlpha(pixel_type="RGB32") #Mask needed to use the transparency of the png overlay
 clip1 = Overlay(clip1, oce, x=720, y=-450, mask=bg)
@@ -171,7 +174,9 @@ sc7a = sc4a
 sc7b = StackHorizontal(clip5sc6, clip4sc6, clip6sc7).AddBorders(0, tb4/2, 0, tb4, color=$000000).BicubicResize(w, h/2, b=0.33, c=0.33)
 sc7 = StackVertical(sc7a,sc7b)
 
+
 ## III - OUTRO #*/
+
 
 ## VI - AUDIO + FINAL BUILD
 
