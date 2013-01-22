@@ -10,5 +10,5 @@ To read the script I highly recommand the user interface AvsPmod 2.4.1 (or later
 To encode the .avs script into a classic video format (.mov + .wav) I use the free open source FFmpeg.
 My FFmepg build is from Zeranoe: FFmpeg git-c74d465 64-bits Static (2013-01-21).
 
-Oce
+Oce 
 oceweb@gmail.com
