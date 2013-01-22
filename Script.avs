@@ -1,6 +1,8 @@
 # WARNING THIS SCRIPT IS IN PROGRESS AND CERTAINLY DOESN'T WORK
 
-########## AviSynth script for my guitar video Loop1.4 
+# I highly recommand the user interface AvsPmod 2.4.1 (or later) to read the script.
+
+########## AviSynth 2.5 script for my guitar video Loop1.4 
 ########## soundcloud.com/ocemusic // oceweb@gmail.com // Licence CC-BY 3.0
 
 ## I - INTRO
@@ -11,6 +13,12 @@ h=1080
 t=337
 
 #### A - Sources
+
+# Note: the sources are called with 2 ways: FFVideoSource is requested for AviSynth 64 bits and FFmpeg 64 bits.
+# BUT AvsPmod is 32 bits only : ( , so you have to switch to the QTInput blocks to use the preview in AvsPmod.
+# Conclusion: to use AvsPmod preview, comment (/* */) "FFVideoSource block" and enable "QTInput blocks".
+# if you then encode with 64 bits FFmpeg (so AviSynth MUST be 64), enable the first one and comment the second one.
+
 #/*# Load the plugin FFMS2, needed for .MOV in ffmpeg/avisynth 64bits, but AvsPmod won't recognize it
 loadplugin("C:\Program Files (x86)\AviSynth 2.5\plugins64\ffms2-x64.dll")
 intro1 = FFVideoSource("F:\Videos\Loops\Loops4_1\Brut\DSC_0031.MOV", threads=1).Killaudio.Trim(0,201)
