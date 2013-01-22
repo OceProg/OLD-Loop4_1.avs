@@ -7,11 +7,21 @@
 # I highly recommand the user interface AvsPmod 2.4.1 (or later) to read the script.
 # How AvsPmod looks like: http://i.imgur.com/h8r5fjO.png
 
-/* To encode the .avs script into a classic video format (.mov + .wav) I use the free open source FFmpeg.
+/* I encode the .avs script into a classic video format, .mov (h.264) for the video and .wav for the sound.
+
+Usually the h.264 is used with mp4 for video and the crappy (Silver Fruit's) .aac for audio. 
+But aac is a compressed format and as it is a video for music, I want to preserve the uncompressed .wav quality 
+of my audio. .mp4 doesn't accept .wav, so I use .mov and it works perfectly well on at least VirtualDub, WMP, 
+VLC, and Youtube.
+
+To encode I use the free open source FFmpeg (64 static build from Zeranoe) + VLC or VirtualDub to read the video.
 Command lines I use (make sure you're in the same folder as ffmpeg.exe):
-1) For ~fast MQ encoding when I need to check a change quickly : 
+1) For ~fast MQ encoding when I need to check a change quickly :
 ffmpeg -i F:\Videos\Loops\Loops4_1\MosaiqueLoop4_1.avs -c:v libx264 -preset fast -crf 30 -c:a copy F:\Videos\Loops\Loops4_1\crf64sdX.mov
-2) For very slow but HQ video and efficient compression (for Youtube):
+2) For even faster check, but no user interface (can't stop,back), you can use FFplay (comes with ffmpeg dowload),
+it will read the script without encoding:
+ffplay F:\Videos\Loops\Loops4_1\Script.avs
+3) For very slow but HQ video and efficient compression (for Youtube):
 ffmpeg -i F:\Videos\Loops\Loops4_1\MosaiqueLoop4_1.avs -c:v libx264 -preset veryslow -crf 16 -c:a copy F:\Videos\Loops\Loops4_1\crf64hd.mov
 */
 
