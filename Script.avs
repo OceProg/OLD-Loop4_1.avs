@@ -1,6 +1,6 @@
 ########## AviSynth 2.5 script for my guitar video Loop1.4
 ########## ===============================================
-########## soundcloud.com/ocemusic // oceweb@gmail.com // Licence CC-BY 3.0
+########## By Oce // oceweb@gmail.com // http://www.youtube.com/user/OceYT // Licence CC-BY 3.0
 
 # WARNING THIS SCRIPT IS IN PROGRESS AND CERTAINLY DOESN'T WORK
 
