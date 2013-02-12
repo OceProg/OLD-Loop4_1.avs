@@ -1,6 +1,7 @@
 Loop4_1.avs
 ===========
 
+!Old version!
 Video editing with AviSynth script of my video Loop 4.1 . 
 Licence CC-BY 3.0 (http://creativecommons.org/licenses/by/3.0/)
 
